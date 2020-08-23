@@ -108,6 +108,7 @@ export class HomePage implements OnInit {
 
   copyFileToLocalDir(fullPath) {
     let myPath = fullPath;
+
     // Make sure we copy from the right location
     if (fullPath.indexOf('file://') < 0) {
       myPath = 'file://' + fullPath;
