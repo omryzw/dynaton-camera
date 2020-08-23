@@ -60,7 +60,6 @@ export class HomePage implements OnInit {
 
   async selectMedia() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Select ',
       buttons: [
         {
           text: 'Camera',
