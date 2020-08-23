@@ -23,6 +23,7 @@
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/file": "^5.28.0",
     "@ionic-native/image-picker": "^5.28.0",
+    "@ionic-native/in-app-browser": "^4.20.0",
     "@ionic-native/media-capture": "^5.28.0",
     "@ionic-native/photo-viewer": "^5.28.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -31,6 +32,7 @@
     "cordova-ios": "6.1.0",
     "firebase": "^7.19.0",
     "rxjs": "~6.5.5",
+    "rxjs-compat": "^6.6.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

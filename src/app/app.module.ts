@@ -17,6 +17,8 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     File,
     MediaCapture,
     PhotoViewer,
+    InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
