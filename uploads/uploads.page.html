@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Cloud Files</ion-title>
+    <ion-title>On Cloud</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -16,7 +16,7 @@
       
       <ion-label class="ion-text-wrap">
         {{ f.name }}
-        <p>{{ f.full }}</p>
+        <p *ngIf="showFullPath">{{ f.full }}</p>
       </ion-label>
  
       <ion-button slot="end" (click)="deleteFile(f.ref)" color="danger">

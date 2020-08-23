@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 import * as firebase from 'firebase/app';
 
 
@@ -10,8 +9,9 @@ import * as firebase from 'firebase/app';
 })
 export class UploadsPage implements OnInit {
   cloudFiles = [];
+  showFullPath = false;
 
-  constructor(private iab: InAppBrowser) { }
+  constructor() { }
 
   ngOnInit() {
     this.loadFiles();
@@ -33,9 +33,9 @@ export class UploadsPage implements OnInit {
     });
   }
 
-  openExternal(url) {
-    this.iab.create(url);
-  }
+  // openExternal(url) {
+  //   this.iab.create(url);
+  // }
  
   deleteFile(ref: firebase.storage.Reference) {
     ref.delete().then(() => {
