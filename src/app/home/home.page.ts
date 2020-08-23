@@ -168,8 +168,8 @@ export class HomePage implements OnInit {
 
     uploadTask.then(async res => {
       const toast = await this.toastCtrl.create({
-        duration: 3600,
-        message: 'Success : View Images In The Uploads Area'
+        duration: 3200,
+        message: 'Success : Click cloud icon to view files'
       });
       toast.present();
       this.deleteFile(f);
@@ -179,7 +179,10 @@ export class HomePage implements OnInit {
   }
 
   getMimeType(fileExt) {
-    if (fileExt == 'jpg') return { type: 'image/jpg' };
+    if (fileExt == 'wav') return { type: 'audio/wav' };
+    else if (fileExt == 'jpg') return { type: 'image/jpg' };
+    else if (fileExt == 'mp4') return { type: 'video/mp4' };
+    else if (fileExt == 'MOV') return { type: 'video/quicktime' };
   }
 }
 
