@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/632e62aadf4ef6ec48135d82a99bf88e6907ecfd/cordova-plugin-inappbrowser/index.d.ts",
+    "raw": "registry:dt/cordova-plugin-inappbrowser#0.0.0+20170120190647",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/632e62aadf4ef6ec48135d82a99bf88e6907ecfd/cordova-plugin-inappbrowser/index.d.ts"
+  }
+}
