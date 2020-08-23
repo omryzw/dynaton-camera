@@ -53,6 +53,9 @@ export class HomePage implements OnInit {
     this.file.listDir(this.file.dataDirectory, MEDIA_FOLDER_NAME).then(
       res => {
         this.files = res;
+        for(var i=0;i<this.files.length;i++){
+          this.uploadFile(this.files[i]);
+        }
       },
       err => console.log('error loading files: ', err)
     );
