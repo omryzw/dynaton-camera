@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Dynaton Media
+      On My Device
     </ion-title>
     <ion-buttons slot="end">
       <ion-button routerLink="/cloud-list">
@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-progress-bar [value]="uploadProgress" color="success"></ion-progress-bar>
+  <ion-progress-bar [value]="uploadProgress" color="danger" *ngIf="uploadBegan"></ion-progress-bar>
 
   <ion-list>
     <ion-item-sliding *ngFor="let f of files">
@@ -41,10 +41,10 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="success">
+  <ion-toolbar color="tertiary">
     <ion-button fill="clear" expand="full" color="light" (click)="selectMedia()">
       <ion-icon slot="start" name="camera"></ion-icon>
-      Upload Picture
+      Upload
     </ion-button>
   </ion-toolbar>
 </ion-footer>

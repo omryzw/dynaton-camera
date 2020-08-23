@@ -21,6 +21,7 @@ const MEDIA_FOLDER_NAME = 'my_media';
 export class HomePage implements OnInit {
   files = [];
   uploadProgress = 0;
+  uploadBegan = false;
 
   constructor(
     private imagePicker: ImagePicker,
@@ -146,6 +147,7 @@ export class HomePage implements OnInit {
   }
 
   async uploadFile(f: FileEntry) {
+    this.uploadBegan = true;
     const path = f.nativeURL.substr(0, f.nativeURL.lastIndexOf('/') + 1);
     const type = this.getMimeType(f.name.split('.').pop());
     const buffer = await this.file.readAsArrayBuffer(path, f.name);
@@ -166,11 +168,13 @@ export class HomePage implements OnInit {
 
     uploadTask.then(async res => {
       const toast = await this.toastCtrl.create({
-        duration: 3000,
-        message: 'File upload finished!'
+        duration: 3200,
+        message: 'Success : Click cloud icon to view files'
       });
       toast.present();
       this.deleteFile(f);
+      this.uploadBegan = false;
+
     });
   }
 
