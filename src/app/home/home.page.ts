@@ -92,11 +92,6 @@ export class HomePage implements OnInit {
       }
     );
 
-    // If you get problems on Android, try to ask for Permission first
-    // this.imagePicker.requestReadPermission().then(result => {
-    //   console.log('requestReadPermission: ', result);
-    //   this.selectMultiple();
-    // });
   }
 
   captureImage() {
@@ -109,7 +104,6 @@ export class HomePage implements OnInit {
       (err: CaptureError) => console.error(err)
     );
   }
-
 
 
   copyFileToLocalDir(fullPath) {
@@ -139,8 +133,7 @@ export class HomePage implements OnInit {
 
   openFile(f: FileEntry) {
     if (f.name.indexOf('.jpg') > -1) {
-      // E.g: Use the Photoviewer to present an Image
-      this.photoViewer.show(f.nativeURL, 'MY awesome image');
+      this.photoViewer.show(f.nativeURL, f.name);
     }
   }
 
