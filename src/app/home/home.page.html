@@ -13,7 +13,6 @@
 
 <ion-content>
   <ion-progress-bar [value]="uploadProgress" color="danger" *ngIf="uploadBegan"></ion-progress-bar>
-
   <ion-list>
     <ion-item-sliding *ngFor="let f of files">
       <ion-item (click)="openFile(f)">
