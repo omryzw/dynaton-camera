@@ -33,10 +33,6 @@ export class UploadsPage implements OnInit {
     });
   }
 
-  // openExternal(url) {
-  //   this.iab.create(url);
-  // }
- 
   deleteFile(ref: firebase.storage.Reference) {
     ref.delete().then(() => {
       this.loadFiles();
